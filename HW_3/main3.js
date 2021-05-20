@@ -47,6 +47,7 @@ function countBasketPrice(...all) {  // (...оператор rest собирае
     for (let prices of all) { // с помощью цикла for для всех цен в массиве all
         result += prices // сложить их в переменную result
     }
+    console.log(all.flat().join(' ')); // добавил чтоб увидеть что в массиве
     return result // верни результат цикла
 }
 
