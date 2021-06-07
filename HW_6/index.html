@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HW_6</title>
+</head>
+
+<body>
+    <ol class="task">
+        <li>
+            Реализовывать модуль корзины:
+            <br> a. Добавлять в объект корзины выбранные товары по клику на кнопке «Купить» без
+            перезагрузки страницы;
+            <br> b. Привязать к событию покупки товара пересчет корзины и обновление ее внешнего
+            вида.
+        </li>
+        <button class="catalog_button" onclick="catalogShow()">
+            Показать каталог
+        </button>
+        <div id="catalog"></div>
+        <button class="basket_button" onclick="basketShow()">Корзина</button>
+        <div class="basket"></div>
+        <li>
+            * У товара может быть несколько изображений. Нужно:
+            <br> a. Реализовать функционал показа полноразмерных картинок товара в модальном окне;
+            <br> b. Реализовать функционал перехода между картинками внутри модального окна.
+        </li>
+    </ol>
+    <div id="big_picture"></div>
+    <div id="gallery">
+        <img id="image_1" src="img/gallery/small/1.png" />
+        <img id="image_2" src="img/gallery/small/2.png" />
+        <img id="image_3" src="img/gallery/small/3.png" />
+        <img id="image_4" src="img/gallery/small/4.png" />
+        <img id="image_5" src="img/gallery/small/5.png" />
+    </div>
+    <script src="index.js" async></script>
+    <script src="slide.js" async></script>
+</body>
+
+</html>
