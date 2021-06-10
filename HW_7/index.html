@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HW_7</title>
+</head>
+
+<body>
+    <ol class="task">
+        <li>
+            Реализовывать модуль корзины:
+            <br> Добавить возможность не только смотреть состав корзины, но и редактировать его,
+            обновляя общую стоимость или выводя сообщение «Корзина пуста».
+            <br> РЕАЛИЗОВАННО В HW_6
+        </li>
+        <div id="big_picture"></div>
+        <div id="gallery">
+            <img id="image_1" src="img/gallery/small/1.png" />
+            <img id="image_2" src="img/gallery/small/2.png" />
+            <img id="image_3" src="img/gallery/small/3.png" />
+            <img id="image_4" src="img/gallery/small/4.png" />
+            <img id="image_5" src="img/gallery/small/5.png" />
+        </div>
+        <button class="catalog_button" onclick="catalogShow()">
+            Показать каталог
+        </button>
+        <div id="catalog"></div>
+        <button class="basket_button" onclick="basketShow()">Корзина</button>
+        <div class="basket"></div>
+        <li>
+            На странице корзины:
+            <br>  a. Сделать отдельные блоки «Состав корзины», «Адрес доставки», «Комментарий»;
+            <br>  b. Сделать эти поля сворачиваемыми;
+            <br>  c. Заполнять поля по очереди, то есть давать посмотреть состав корзины, внизу которого
+            есть кнопка «Далее». Если нажать ее, сворачивается «Состав корзины» и открывается
+            «Адрес доставки» и так далее.
+        </li>
+    </ol>
+    <div>
+            <ul class="write"> «Адрес доставки»
+                <li><label>
+                    <input type = "text" placeholder = "Ваше Имя" >
+                </label></li>
+                <li><label>
+                    <input  class="mail" type = "text" placeholder = "номер телефона" >
+                </label></li>
+                <li><label>
+                    <textarea name="comment" cols="21" rows="10" placeholder = "адрес"></textarea>
+                </label></li>
+                <li><input type = "reset" value = " Очистить " ></li><br>
+                <li><input type = "button" value = "Отправить" ></li>
+            </ul>
+    </div>
+    <div>
+            <ul class="write"> «Комментарий»
+                <li><label>
+                    <textarea name="comment" cols="21" rows="10" placeholder = "Комментарий"></textarea>
+                </label></li>
+                <li><input type = "reset" value = " Очистить " ></li><br>
+                <li><input type = "button" value = "Отправить" ></li>
+            </ul>
+    </div>
+    <script src="index.js" async></script>
+    <script src="slide.js" async></script>
+</body>
+
+</html>
