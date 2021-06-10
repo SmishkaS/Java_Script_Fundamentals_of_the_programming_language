@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HW_8</title>
+    </head>
+
+    <body>
+        <ol>
+            <li>
+                Продумать, где можно применить замыкания для практикума из седьмого урока.
+                <h3> ОТВЕТ </h3>
+                <h4>Замыкание – это функция вместе со всеми внешними переменными, которые ей доступны.
+                    Все переменные внутри функции – это свойства специального внутреннего объекта LexicalEnvironment,
+                    который создаётся при её запуске. В отличие от window, объект LexicalEnvironment является внутренним,
+                    он скрыт от прямого доступа.
+                    Из функции мы можем обратиться не только к локальной переменной, но и к внешней.
+                    Интерпретатор, при доступе к переменной, сначала пытается найти переменную в текущем LexicalEnvironment,
+                    а затем, если её нет – ищет во внешнем объекте переменных.
+                <br>Отсюда делаем вывод что везде где мы применяем функцию в 7 уроке мы можем применять замыкание.
+                </h4>
+            </li>
+            <li>
+                Не выполняя код, ответить, что выведет браузер и почему:
+            </li>
+            <h4>
+            <ul><label>
+                if (!("a" in window)) {
+                var a = 1;
+                }
+                alert(a);
+                <br><input type = "text" placeholder = "undefined" >
+            </label>
+            <br><label>
+                var b = function a(x) {
+                x && a(--x);
+                };
+                alert(a);
+                <br><input type = "text" placeholder = "Error" >
+            </label>
+            <br><label>
+                function a(x) {
+                return x * 2;
+                }
+                var a;
+                alert(a);
+                <br><input type = "text" placeholder = "undefined" >
+            </label>
+            <br><label>
+                function b(x, y, a) {
+                arguments[2] = 10;
+                alert(a);
+                }
+                b(1, 2, 3);
+                <br><input type = "text" placeholder = "10" >
+            </label>
+            <br><label>
+                function a() {
+                alert(this);
+                }
+                a.call(null);
+                <br><input type = "text" placeholder = "Error" >
+            </label>
+            </h4>
+        </ul>
+    </body>
+</html>
